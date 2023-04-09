@@ -1,0 +1,307 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2212                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    note        "summarized (max avg min) values from 6 processors";
+    class       dictionary;
+    location    "/home/jcshi/OpenFOAM_Project/cases/motorBike/postProcessing/profiling/10";
+    object      profiling;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+profiling
+{
+    trigger0
+    {
+        id              0;
+        description     "application::main";
+        calls           1;
+        totalTime       ( 53.2954 53.2948 53.2941 );
+        childTime       ( 51.3025 51.298 51.2906 );
+        active          true;
+    }
+    trigger1
+    {
+        id              1;
+        parentId        0;
+        description     "functionObjects.start()";
+        calls           1;
+        totalTime       ( 0.00124445 0.00124054 0.00122389 );
+        childTime       ( 0.00107464 0.00107288 0.00106893 );
+        maxMem          ( 694716 683274 663792 );
+        active          false;
+    }
+    trigger2
+    {
+        id              2;
+        parentId        1;
+        description     "functionObjects::read";
+        calls           1;
+        totalTime       ( 0.00107464 0.00107288 0.00106893 );
+        childTime       ( 0.00100006 0.000986702 0.00098269 );
+        maxMem          ( 694716 683274 663792 );
+        active          false;
+    }
+    trigger3
+    {
+        id              3;
+        parentId        2;
+        description     "functionObject::forceCoeffs1::new";
+        calls           1;
+        totalTime       ( 0.00100006 0.000986702 0.00098269 );
+        childTime       0;
+        maxMem          ( 694716 683274 663792 );
+        active          false;
+    }
+    trigger4
+    {
+        id              4;
+        parentId        0;
+        description     "time.run() motorBike";
+        calls           10;
+        totalTime       ( 50.2656 50.2533 50.2468 );
+        childTime       ( 19.516 19.2785 19.1131 );
+        maxMem          ( 913204 879558 840644 );
+        active          true;
+    }
+    trigger5
+    {
+        id              5;
+        parentId        4;
+        description     "fvMatrix::solve.U";
+        calls           10;
+        totalTime       ( 10.1051 10.0541 10.0276 );
+        childTime       ( 9.34089 9.33164 9.32517 );
+        maxMem          ( 920324 901172 876616 );
+        active          false;
+    }
+    trigger6
+    {
+        id              6;
+        parentId        5;
+        description     "lduMatrix::solver.Ux";
+        calls           10;
+        totalTime       ( 3.35366 3.35045 3.34881 );
+        childTime       ( 2.89278 2.89277 2.89275 );
+        maxMem          ( 920324 901172 876616 );
+        active          false;
+    }
+    trigger7
+    {
+        id              7;
+        parentId        6;
+        description     "lduMatrix::smoother.Ux";
+        calls           10;
+        totalTime       ( 2.89278 2.89277 2.89275 );
+        childTime       0;
+        maxMem          ( 920324 901172 876616 );
+        active          false;
+    }
+    trigger8
+    {
+        id              8;
+        parentId        5;
+        description     "lduMatrix::solver.Uy";
+        calls           10;
+        totalTime       ( 3.0324 3.03039 3.02934 );
+        childTime       ( 2.57529 2.57528 2.57526 );
+        maxMem          ( 920324 901172 876616 );
+        active          false;
+    }
+    trigger9
+    {
+        id              9;
+        parentId        8;
+        description     "lduMatrix::smoother.Uy";
+        calls           10;
+        totalTime       ( 2.57529 2.57528 2.57526 );
+        childTime       0;
+        maxMem          ( 920324 901172 876616 );
+        active          false;
+    }
+    trigger10
+    {
+        id              10;
+        parentId        5;
+        description     "lduMatrix::solver.Uz";
+        calls           10;
+        totalTime       ( 2.95522 2.9508 2.94702 );
+        childTime       ( 2.49891 2.4989 2.49888 );
+        maxMem          ( 920324 901172 876616 );
+        active          false;
+    }
+    trigger11
+    {
+        id              11;
+        parentId        10;
+        description     "lduMatrix::smoother.Uz";
+        calls           10;
+        totalTime       ( 2.49891 2.4989 2.49888 );
+        childTime       0;
+        maxMem          ( 920324 901172 876616 );
+        active          false;
+    }
+    trigger12
+    {
+        id              12;
+        parentId        4;
+        description     "fvMatrix::solve.p";
+        calls           10;
+        totalTime       ( 6.01746 6.01461 6.01123 );
+        childTime       ( 5.93649 5.93181 5.92801 );
+        maxMem          ( 920324 899939 870256 );
+        active          false;
+    }
+    trigger13
+    {
+        id              13;
+        parentId        12;
+        description     "lduMatrix::solver.p";
+        calls           10;
+        totalTime       ( 5.93649 5.93181 5.92801 );
+        childTime       ( 5.35807 5.3363 5.31656 );
+        maxMem          ( 920324 899939 870256 );
+        active          false;
+    }
+    trigger14
+    {
+        id              14;
+        parentId        13;
+        description     "lduMatrix::solver.coarsestLevelCorr";
+        calls           10;
+        totalTime       ( 5.35807 5.3363 5.31656 );
+        childTime       0;
+        maxMem          ( 920324 899939 870256 );
+        active          false;
+    }
+    trigger15
+    {
+        id              15;
+        parentId        4;
+        description     "fvMatrix::solve.omega";
+        calls           10;
+        totalTime       ( 1.73653 1.59186 1.48676 );
+        childTime       ( 1.67042 1.53417 1.43152 );
+        maxMem          ( 920324 880745 840644 );
+        active          false;
+    }
+    trigger16
+    {
+        id              16;
+        parentId        15;
+        description     "lduMatrix::solver.omega";
+        calls           10;
+        totalTime       ( 1.67042 1.53417 1.43152 );
+        childTime       ( 1.08806 1.08805 1.08805 );
+        maxMem          ( 920324 880745 840644 );
+        active          false;
+    }
+    trigger17
+    {
+        id              17;
+        parentId        16;
+        description     "lduMatrix::smoother.omega";
+        calls           10;
+        totalTime       ( 1.08806 1.08805 1.08805 );
+        childTime       0;
+        maxMem          ( 920324 880745 840644 );
+        active          false;
+    }
+    trigger18
+    {
+        id              18;
+        parentId        4;
+        description     "fvMatrix::solve.k";
+        calls           10;
+        totalTime       ( 1.66234 1.61763 1.58167 );
+        childTime       ( 1.59044 1.54116 1.50295 );
+        maxMem          ( 920324 880745 840644 );
+        active          false;
+    }
+    trigger19
+    {
+        id              19;
+        parentId        18;
+        description     "lduMatrix::solver.k";
+        calls           10;
+        totalTime       ( 1.59044 1.54116 1.50295 );
+        childTime       ( 1.0877 1.08768 1.08767 );
+        maxMem          ( 920324 880745 840644 );
+        active          false;
+    }
+    trigger20
+    {
+        id              20;
+        parentId        19;
+        description     "lduMatrix::smoother.k";
+        calls           10;
+        totalTime       ( 1.0877 1.08768 1.08767 );
+        childTime       0;
+        maxMem          ( 920324 880745 840644 );
+        active          false;
+    }
+    trigger21
+    {
+        id              21;
+        parentId        0;
+        description     "functionObjects.execute()";
+        calls           9;
+        totalTime       ( 1.05449 1.04348 1.02471 );
+        childTime       ( 1.05348 1.04242 1.02361 );
+        maxMem          ( 913204 879558 840644 );
+        active          false;
+    }
+    trigger22
+    {
+        id              22;
+        parentId        21;
+        description     "functionObject::forceCoeffs1::execute";
+        calls           9;
+        totalTime       ( 1.0526 1.04094 1.02153 );
+        childTime       0;
+        maxMem          ( 913204 879558 840644 );
+        active          false;
+    }
+    trigger23
+    {
+        id              23;
+        parentId        21;
+        description     "functionObject::forceCoeffs1:write";
+        calls           9;
+        totalTime       ( 0.00221777 0.00147678 0.000782759 );
+        childTime       0;
+        maxMem          ( 913204 879558 840644 );
+        active          false;
+    }
+    trigger24
+    {
+        id              24;
+        parentId        4;
+        description     "objectRegistry::writeObject";
+        calls           1;
+        totalTime       ( 0.00075297 0.000386461 0.000269676 );
+        childTime       0;
+        maxMem          ( 920324 866568 832280 );
+        active          false;
+    }
+}
+
+memInfo
+{
+    size            ( 920324 866568 832280 );
+    peak            909432;
+    rss             585656;
+    free            ( 1.04733e+07 1.04714e+07 1.04688e+07 );
+    units           kB;
+}
+
+
+// ************************************************************************* //

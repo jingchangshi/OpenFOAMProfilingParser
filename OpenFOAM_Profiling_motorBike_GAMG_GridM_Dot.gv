@@ -1,0 +1,102 @@
+// OpenFOAM profiling data
+digraph OpenFOAM_Profiling_motorBike_GAMG_GridM_Dot {
+	0 [label="\"application::main\"
+time=5.33e+01s
+percent=100.00%" shape=box]
+	1 [label="\"functionObjects.start()\"
+time=1.24e-03s
+percent=0.00%" shape=box]
+	2 [label="\"functionObjects::read\"
+time=1.07e-03s
+percent=0.00%" shape=box]
+	3 [label="\"functionObject::forceCoeffs1::new\"
+time=9.87e-04s
+percent=0.00%" shape=box]
+	4 [label="\"time.run(
+time=5.03e+01s
+percent=94.29%" shape=box]
+	5 [label="\"fvMatrix::solve.U\"
+time=1.01e+01s
+percent=18.87%" shape=box]
+	6 [label="\"lduMatrix::solver.Ux\"
+time=3.35e+00s
+percent=6.29%" shape=box]
+	7 [label="\"lduMatrix::smoother.Ux\"
+time=2.89e+00s
+percent=5.43%" shape=box]
+	8 [label="\"lduMatrix::solver.Uy\"
+time=3.03e+00s
+percent=5.69%" shape=box]
+	9 [label="\"lduMatrix::smoother.Uy\"
+time=2.58e+00s
+percent=4.83%" shape=box]
+	10 [label="\"lduMatrix::solver.Uz\"
+time=2.95e+00s
+percent=5.54%" shape=box]
+	11 [label="\"lduMatrix::smoother.Uz\"
+time=2.50e+00s
+percent=4.69%" shape=box]
+	12 [label="\"fvMatrix::solve.p\"
+time=6.01e+00s
+percent=11.29%" shape=box]
+	13 [label="\"lduMatrix::solver.p\"
+time=5.93e+00s
+percent=11.13%" shape=box]
+	14 [label="\"lduMatrix::solver.coarsestLevelCorr\"
+time=5.34e+00s
+percent=10.01%" shape=box]
+	15 [label="\"fvMatrix::solve.omega\"
+time=1.59e+00s
+percent=2.99%" shape=box]
+	16 [label="\"lduMatrix::solver.omega\"
+time=1.53e+00s
+percent=2.88%" shape=box]
+	17 [label="\"lduMatrix::smoother.omega\"
+time=1.09e+00s
+percent=2.04%" shape=box]
+	18 [label="\"fvMatrix::solve.k\"
+time=1.62e+00s
+percent=3.04%" shape=box]
+	19 [label="\"lduMatrix::solver.k\"
+time=1.54e+00s
+percent=2.89%" shape=box]
+	20 [label="\"lduMatrix::smoother.k\"
+time=1.09e+00s
+percent=2.04%" shape=box]
+	21 [label="\"functionObjects.execute()\"
+time=1.04e+00s
+percent=1.96%" shape=box]
+	22 [label="\"functionObject::forceCoeffs1::execute\"
+time=1.04e+00s
+percent=1.95%" shape=box]
+	23 [label="\"functionObject::forceCoeffs1:write\"
+time=1.48e-03s
+percent=0.00%" shape=box]
+	24 [label="\"objectRegistry::writeObject\"
+time=3.86e-04s
+percent=0.00%" shape=box]
+	0 -> 1
+	1 -> 2
+	2 -> 3
+	0 -> 4
+	4 -> 5
+	5 -> 6
+	6 -> 7
+	5 -> 8
+	8 -> 9
+	5 -> 10
+	10 -> 11
+	4 -> 12
+	12 -> 13
+	13 -> 14
+	4 -> 15
+	15 -> 16
+	16 -> 17
+	4 -> 18
+	18 -> 19
+	19 -> 20
+	0 -> 21
+	21 -> 22
+	21 -> 23
+	4 -> 24
+}

@@ -1,0 +1,6 @@
+{
+  "profiling_file": "profiling_GAMG",
+  "dot_format": "svg",
+  "dot_shape": "box",
+  "case_name": "motorBike_GAMG_GridM"
+}
